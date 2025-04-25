@@ -19,6 +19,7 @@ const schemeModeOptions = [
 ];
 
 addOptionsToPage();
+
 function addOptionsToPage() {
   schemeModeOptions.forEach((scheme) => {
     const newOption = document.createElement("option");
@@ -52,6 +53,7 @@ async function fetchColourScheme(userColour, scheme) {
 }
 
 async function getColourInputInfo(userColour) {
+  colourInfo.innerHTML = "";
   console.log(userColour);
   const response = await fetch(
     `https://www.thecolorapi.com/id?hex=${userColour}`

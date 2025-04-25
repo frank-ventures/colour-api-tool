@@ -13,6 +13,27 @@ body {
   background-color: chocolate;
 }
 
+form {
+  background-color: rgba(240, 248, 255, 0.594);
+  padding: 0.5rem;
+  width: 80%;
+  max-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+input,
+select {
+  width: 50%;
+  min-width: fit-content;
+  min-height: 2rem;
+}
+
+label {
+  margin-top: 0.5rem;
+}
+
 .user-colour-choice {
   border: 2px solid black;
   width: 80%;
