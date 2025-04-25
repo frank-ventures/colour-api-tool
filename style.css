@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  background-color: chocolate;
+}
+
+.individual-colour-complement {
+  height: 5rem;
+  width: 100%;
+}
+.individual-colour-complement-title {
+  background-color: hsla(0, 0%, 100%, 0.463);
+  text-align: center;
+}
+
+.colour-scheme {
+  border: 0.125rem solid #8686868f;
+  background-color: aliceblue;
+
+  min-height: 5rem;
+  width: 75%;
+  max-width: 300px;
+  box-shadow: 2px 2px 1px black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
