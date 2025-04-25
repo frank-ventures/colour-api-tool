@@ -1,6 +1,7 @@
 // --- --- --- ---
 // HTML Elements
 const colourSchemeDiv = document.getElementById("colour-scheme");
+const colourInfo = document.getElementById("colour-info");
 const colourForm = document.getElementById("colourForm");
 const schemeSelect = document.getElementById("schemeSelect");
 
@@ -30,7 +31,6 @@ function addOptionsToPage() {
 // --- --- --- ---
 // Fetch request including colour schemes
 async function fetchColourScheme(userColour, scheme) {
-  console.log(scheme);
   const response = await fetch(
     `https://www.thecolorapi.com/scheme?hex=${userColour}&mode=${scheme}&count=6&format=json`
   );
@@ -51,6 +51,19 @@ async function fetchColourScheme(userColour, scheme) {
   });
 }
 
+async function getColourInputInfo(userColour) {
+  console.log(userColour);
+  const response = await fetch(
+    `https://www.thecolorapi.com/id?hex=${userColour}`
+  );
+  const data = await response.json();
+  console.log("colour input data", data);
+
+  const newImage = document.createElement("img");
+  newImage.src = data.image.named;
+  colourInfo.appendChild(newImage);
+}
+
 // --- --- --- ---
 // Form Event Listener
 colourForm.addEventListener("change", (event) => {
@@ -61,6 +74,10 @@ colourForm.addEventListener("change", (event) => {
   const formDataObject = Object.fromEntries(formData);
 
   console.log(formDataObject);
+
+  if (formDataObject.colourInput) {
+    getColourInputInfo(formDataObject.colourInput.slice(1));
+  }
   fetchColourScheme(
     formDataObject.colourInput.slice(1),
     formDataObject.schemeSelect

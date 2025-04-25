@@ -13,6 +13,22 @@ body {
   background-color: chocolate;
 }
 
+.user-colour-choice {
+  border: 2px solid black;
+  width: 80%;
+  max-width: 300px;
+  min-height: 8rem;
+  padding: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.user-colour-choice h3 {
+  padding-right: 0.25rem;
+  border-right: 2px solid grey;
+}
+
 .individual-colour-complement {
   height: 5rem;
   width: 100%;
