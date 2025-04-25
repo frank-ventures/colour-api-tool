@@ -4,5 +4,10 @@ I came across [this awesome API](https://www.thecolorapi.com/) and wanted to mak
 
 ## To Do
 
-[] Eyedropper
+[X] Eyedropper
+
 [] Better colour picker (using a js library probably)
+
+## Credits
+
+Coloris for the colour picker: https://coloris.js.org/

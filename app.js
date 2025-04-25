@@ -1,10 +1,30 @@
+document.addEventListener("DOMContentLoaded", () => {
+  Coloris({
+    theme: "pill",
+    themeMode: "dark",
+    format: "hex",
+    alpha: false,
+    formatToggle: false,
+
+    el: ".coloris",
+    swatches: [
+      "#067bc2",
+      "#84bcda",
+      "#80e377",
+      "#ecc30b",
+      "#f37748",
+      "#d56062",
+    ],
+    closeButton: true,
+  });
+});
+
 // --- --- --- ---
 // HTML Elements
 const colourSchemeDiv = document.getElementById("colour-scheme");
 const colourInfo = document.getElementById("colour-info");
 const colourForm = document.getElementById("colourForm");
 const schemeSelect = document.getElementById("schemeSelect");
-
 // --- --- --- ---
 // Form Options
 const schemeModeOptions = [

@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alternative Colour Tool</title>
-    <script src="app.js" defer></script>
+    <script src="app.js" type="module" defer></script>
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="coloris.min.css" />
+    <script src="coloris.min.js" type="text/javascript" defer></script>
   </head>
+
   <body>
     <h1>Choose a colour to find out more</h1>
     <section class="user-colour-choice">
@@ -15,7 +19,13 @@
     </section>
     <form id="colourForm">
       <label for="colourInput">Colour Picker:</label>
-      <input type="color" id="colourInput" name="colourInput" />
+      <input
+        type="text"
+        data-coloris
+        id="colourInput"
+        name="colourInput"
+        value=" Click me!"
+      />
 
       <label for="schemeSelect">Pick a complementary colour scheme:</label>
       <select name="schemeSelect" id="schemeSelect"></select>
