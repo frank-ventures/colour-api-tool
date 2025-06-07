@@ -132,10 +132,14 @@ async function fetchColourScheme(userColour, scheme) {
         newButton.style.color = colour.contrast.value;
         newButton.style.borderColor = colour.contrast.value;
         newButton.style.boxShadow = `2px 2px 2px ${colour.contrast.value}`;
-        newButton.addEventListener("click", () => {
-          navigator.clipboard.writeText(thisColourValue.value).then(() => {
-            toastNotification(`${thisColourValue.value} copied to clipboard!`);
-          });
+        newButton.addEventListener("click", async () => {
+          await navigator.clipboard
+            .writeText(thisColourValue.value)
+            .then(() => {
+              toastNotification(
+                `${thisColourValue.value} copied to clipboard!`
+              );
+            });
         });
         // Add each individual button to the individual colour:
         newdiv.appendChild(newButton);
