@@ -1,12 +1,16 @@
 # Colour Tool!
 
+[See it here!](http://colours.frankieshrieves.co.uk/)
+
 I came across [this awesome API](https://www.thecolorapi.com/) and wanted to make an app which interacted with it.
 
-## To Do
+You can pick a colour using [the tool](https://coloris.js.org/).
 
-[X] Eyedropper
+The app then shows you complimentary colours.
 
-[] Better colour picker (using a js library probably)
+You can set the complimentary colour scheme.
+
+And also copy different colour values to your clipboard.
 
 ## Credits
 
