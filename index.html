@@ -12,28 +12,57 @@
   </head>
 
   <body>
-    <h1>Choose a colour to find out more</h1>
-    <section class="user-colour-choice">
-      <h3>Your Colour</h3>
-      <div class="colour-info" id="colour-info"></div>
-    </section>
-    <form id="colourForm">
-      <label for="colourInput">Colour Picker:</label>
-      <input
-        type="text"
-        data-coloris
-        id="colourInput"
-        name="colourInput"
-        value=" Click me!"
-      />
+    <header>
+      <h2>Colour Complimenter</h2>
+    </header>
 
-      <label for="schemeSelect">Pick a complementary colour scheme:</label>
-      <select name="schemeSelect" id="schemeSelect"></select>
-    </form>
+    <section class="intro">
+      <h1>Pick a colour, see the compliments</h1>
+
+      <dialog class="instructions">
+        <button class="button" autofocus>Close</button>
+        <ul>
+          <li>Use the colour picker to select a colour</li>
+          <li>Use the dropdown menu to see the different schemes available</li>
+          <li>Information about the colour you've selected will appear</li>
+          <li>The complimentary colours will appear below that</li>
+          <li>
+            You can click a button to copy a colour code to your clipboard
+          </li>
+        </ul>
+      </dialog>
+      <button class="button" id="showDialog">What is this?</button>
+    </section>
+
+    <section class="colour-interaction">
+      <form id="colourForm">
+        <label for="colourInput">Colour Picker:</label>
+        <input
+          class="button coloris"
+          type="text"
+          data-coloris
+          id="colourInput"
+          name="colourInput"
+          value=" Click me!"
+        />
+
+        <label for="schemeSelect">Choose a complementary scheme:</label>
+        <select name="schemeSelect" id="schemeSelect"></select>
+      </form>
+
+      <article class="user-colour-choice">
+        <h3>Your Colour</h3>
+        <div class="colour-info" id="colour-info"></div>
+      </article>
+    </section>
 
     <div class="colour-scheme" id="colour-scheme">
       <p>Colours will appear in here!</p>
     </div>
-    <footer><p>Woo!</p></footer>
+    <footer>
+      <p>Woo!</p>
+      <a href="https://github.com/frank-ventures">Made By Frank</a>
+      <a href="https://www.thecolorapi.com/">The Color API</a>
+    </footer>
   </body>
 </html>
